@@ -1,0 +1,18 @@
+
+#include<iostream>
+using namespace std;
+int odd_even(int a)
+{
+	if(a%2==0)
+	cout<<a<<" is even ";
+	else
+	cout<<a<<" is odd ";
+}
+int main()
+{
+int a;
+cout<<"input any number :";
+cin>>a;
+odd_even(a);
+return 0;
+}
