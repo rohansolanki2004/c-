@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int prime_or_not(int a)
+{
+	int i;
+	if (a <= 1) 
+	{
+        cout << "Number is not prime number";
+        return 1;
+    }
+	i=a-1;
+	while (i>1)
+	{
+	if(a%i==0)
+	{
+	cout<<"number is not prime number";
+	return 1;
+}
+	--i;
+    }
+    cout<<"number is prime number";
+    return 0;
+}
+int main()
+{
+	int a=7;
+	prime_or_not(a);
+	return 0;
+	
+}
