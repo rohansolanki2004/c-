@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	double p , r, t,n ;
+	double A;
+	cout<<" value of initial principal balance ";
+	cin>>p;
+	cout<<" interest rate ";
+	cin>>r;
+	cout << "Number of times interest applied per time period (n): ";
+    cin >> n;
+	cout<<" number of time periods elapsed ";
+	cin>>t;
+	A = p * pow((1 + (r / (n * 100))), n * t);
+	cout<<A ;
+	return 0;
+}
