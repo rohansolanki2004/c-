@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std ;
+int main ()
+{
+	int i ;
+	for (i=0;i<=256;i++)
+	{
+		cout<<"for value "<<i<<" charcter in ascii is "<< static_cast<char>(i)<<"\n"<<endl;
+	}
+}
