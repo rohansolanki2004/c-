@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int lcm(int a, int b)
+{
+	int flag=1,max_num;
+	max_num = (a>b)?a:b;
+	while(flag)
+	{
+	if (max_num % a == 0 && max_num % b == 0) {
+            cout << "LCM of " << a << " and " << b << " is " << max_num;
+            break;
+        }
+        
+        ++max_num;	
+	}
+	
+}
+int main()
+{
+	int a=12,b=18;
+    lcm(a,b);
+	return 0;
+	
+}
