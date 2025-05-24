@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+bool prime(int a)
+{
+	if (a <= 1)
+        return false;
+    
+    for (int i = 2; i < a; ++i)
+    {
+        if (a % i == 0)
+            return false;
+    }
+    return true;
+}
+
+void prime_between(int x,int y)
+{
+	int min=(x<y)?x:y;
+	int max=(x>y)?x:y;
+	for(int j=min;j<=max;j++)
+	{
+    	if(prime(j))
+    	{
+        	cout<< j<<" is prime \n ";
+        }
+	}
+	cout<<endl;
+}
+int main()
+{
+	int x, y ;
+	cout <<"want prime number between \n";
+	cin>>x;
+	cout<<"and \n";
+	cin>>y;
+	prime_between(x,y);
+	return 0;
+}
