@@ -1,0 +1,16 @@
+// logic:     Celsius = ((Fahrenheit - 32) * 5) / 9
+#include<iostream>
+using namespace std;
+float ftoh( float f)
+{
+	return f - 32.0 * 5.0 / 9.0 ;
+}
+int main ()
+{
+	float f ,c ;
+	cout<<"input temperature in fahrenheit :";
+	cin>> f;
+	c = ftoh(f);
+	cout<< c;
+	return 0;
+}
