@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int sum_nth_term(int n,int sum)
+{
+	int i;
+	cout<<"sum of how many first natural numbers : ";
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		sum=sum+i;
+	}
+	return sum; 
+}
+int main()
+{
+	int n,sum=0;
+	sum=sum_nth_term(n,sum);
+	cout<<"sum is "<<sum;
+	return 0;
+}
