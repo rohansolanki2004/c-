@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void factors(int i)
+{
+	cout<<"factors of natural number "<<i <<" are\n";
+	for(int j=i;j>0;j--)
+	{
+		if(i%j==0)
+		cout<<j<<"\n";
+	}
+}
+int main()
+{
+	int i;
+	cout<<"factors of natural number: ";
+	cin>>i;
+	factors(i);
+	return 0;
+}
