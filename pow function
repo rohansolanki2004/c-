@@ -1,0 +1,9 @@
+#include <math.h>  
+#include<iostream>
+using namespace std;
+int main() {
+    int x = 5, y = 3, result;
+    result = pow(x,y);//pow(base,exponent)
+    cout<<x<<" raised to the power "<<y <<" is "<<result;
+    return 0;
+}
