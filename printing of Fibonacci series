@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+void fibonacci(int x)
+{
+	int f[x+1];
+	f[0]=0;
+	f[1]=1;
+	cout<<"at index 0 "<<"fibonacci number is "<<f[0]<<"\n";
+	cout<<"at index 1 "<<"fibonacci number is "<<f[1]<<"\n";
+	for(int i=2;i<=x;i++)
+	{
+		f[i]=f[i-1]+f[i-2];
+		cout<<"at index "<<i<<" fibonacci number is "<<f[i]<<"\n";
+	}
+
+}
+int main()
+{
+	int x=25;
+	fibonacci(x);
+	return 0;
+}
