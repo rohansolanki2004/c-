@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int fibonacci(int x)
+{
+	int f[x+1];
+	int i,sum=0;
+	f[0]=0;
+	f[1]=1;
+	sum=sum+f[0];
+	for( i=2;i<x;i++)
+	{
+		f[i]=f[i-1]+f[i-2];
+		if(i%2==0)
+		{
+			sum=sum+f[i];
+		}
+	}
+	return sum;
+
+}
+int main()
+{
+	int x,s;
+	cout<<"want number of term in fibonacci series : ";
+	cin>>x;
+	s=fibonacci(x);
+	cout<<"Sum of Fibonacci Numbers at Even Indexes of N Terms is: :"<<s;
+	return 0;
+} 
