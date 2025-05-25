@@ -3,17 +3,22 @@
 using namespace std;
 int armstrong(int a)
 {
-	int cube_sum=0;
+	int cube_sum=0,arm=a;
+	int k = a, digits = 0;
+	 while (k > 0) {
+        digits++;
+        k /= 10;
+    }
 	while(a>0)
 	{
-		cube_sum=cube_sum+ pow(a%10,3);
+		cube_sum=cube_sum+ pow(a%10,digits);
 		a=a/10;
 	}
 	return (cube_sum);
 }
 int main()
 {
-	int a=153,arm;
+	int a=407,arm;
 	arm=armstrong(a);
 	if(arm==a)
 	cout<<a<<" is armstrong number";
