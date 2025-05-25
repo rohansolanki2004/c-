@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+bool neon_number_(int a)
+{
+	int square,sum=0;
+	square=a*a;
+	while(square>0)
+	{
+		sum=sum+square%10;
+		square=square/10;
+	}
+	return (sum==a);
+}
+void neon_number_in_range(int x,int y)
+{
+	int min=(x<y)?x:y;
+	int max=(x>y)?x:y;
+	cout<<"neon number present between "<<x <<" and "<<y <<" are \n";
+	for(int j=min;j<=max;j++)
+	{
+		if(neon_number_(j))
+		cout<<j<<"  ";
+	}
+}
+int main()
+{
+	int x=0,y=100000;
+	neon_number_in_range(x,y);
+	return 0;
+}
