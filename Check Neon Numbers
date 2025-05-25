@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int neon_number(int a)
+{
+	int square,sum=0;
+	square=a*a;
+	while(square>0)
+	{
+		sum=sum+square%10;
+		square=square/10;
+	}
+	if(sum==a)
+	cout<<a<<" is neon number";
+	else
+	cout<<a<<" is not a neon number";
+}
+int main()
+{
+	int a=9;
+	neon_number(a);
+	return 0;
+}
