@@ -1,0 +1,41 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+bool armstrong(int a)
+{
+	int cube_sum=0,arm=a;
+	int k = a, digits = 0;
+	 while (k > 0) {
+        digits++;
+        k /= 10;
+    }
+	while(a>0)
+	{
+		cube_sum=cube_sum+ pow(a%10,digits);
+		a=a/10;
+	}
+	if(cube_sum==arm)
+	return true;
+	else
+	return 0;
+
+}
+void armstrong_range(int x,int y)
+{
+	int min=(x<y)?x:y;
+	int max=(x>y)?x:y;
+	cout<<"armstrong number present between "<<x <<" and "<<y <<" are \n";
+	for(int j=min;j<=max;j++)
+	{
+		if(armstrong(j))
+		cout<<j<<"  ";
+	}
+}
+int main()
+{
+	int x=1,y=1000;
+	armstrong_range(x,y);
+	return 0;
+	
+	
+}
