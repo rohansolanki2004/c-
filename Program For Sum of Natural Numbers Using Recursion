@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int sumNnumber(int n)
+{
+	if (n == 0)
+        return 0;
+	return n+sumNnumber(n-1);
+}
+int main()
+{
+	int n;
+	cout<<" sum of n natural number \n enter vaue of n :";
+	cin>>n;
+	if (n < 0)
+        cout << "Please enter a non-negative number." << endl;
+    else
+    {
+	 int sum=sumNnumber(n); 
+	cout<<"sum of "<< n <<" natural number is "<<sum<<endl;
+    }
+    return 0;
+}
